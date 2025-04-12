@@ -22,7 +22,7 @@ board.forEach((cell) => {
             checkWinner();
         }
         console.log(sortedArray = currentPlayer.playerArray.sort());
-        togglePlayer()
+        togglePlayer();
         console.log(gamei);
         gamei++;
         
@@ -35,13 +35,23 @@ function checkWinner() {
         [0, 3, 6], [1, 4, 7], [2, 5, 8],
         [0, 4, 8], [2, 4, 6]
     ];
-    // console.log('masuk tahap cari pemenang');
-    sortedArray = currentPlayer.playerArray.sort();
+    console.log('masuk tahap cari pemenang');
+    const sortedArray = currentPlayer.playerArray.map(Number).sort();
     for (let i = 0; i < winArrays.length; i++) {
-        if (sortedArray.join(",") === winArrays[i].join(",")){
-            console.log(`${currentPlayer.username} menang!`);
-        }
-    }
+        let possibleWin = 0;
+
+        for (let j = 0; j < winArrays[i].length; j++){
+            if (sortedArray.includes(winArrays[i][j])){
+                possibleWin++;
+            }
+        };
+        console.log(`Kemungkinan menang ${possibleWin}`);
+        console.log(`Sorted Array ${sortedArray}`);
+        if (possibleWin === 3){
+            alert(currentPlayer.username + ' menang!');
+            return;
+        }  
+    };
 }
 
 function AddSign(selectedCell, playerSign) {
