@@ -1,12 +1,12 @@
 const playerX ={
-    username : "Player X",
-    codename : "X",
+    userName : "Player X",
+    codeName : "X",
     playerArray : [],
 }
 
 const playerO ={
-    username : "Player O",
-    codename : "O",
+    userName : "Player O",
+    codeName : "O",
     playerArray : [],
 }
 
@@ -16,14 +16,12 @@ let currentPlayer = playerX;
 
 board.forEach((cell) => {
     cell.addEventListener('click', () => {
-        AddSign(cell, currentPlayer.codename);
+        if (cell.classList.contains('filled')) return;
+        AddCodeName(cell, currentPlayer.codeName);
+        cell.classList.add('filled')
         currentPlayer.playerArray.push(cell.id);
-        if(gamei > 2){
-            checkWinner();
-        }
-        console.log(sortedArray = currentPlayer.playerArray.sort());
+        if(gamei > 2) checkWinner();
         togglePlayer();
-        console.log(gamei);
         gamei++;
         
     });
@@ -35,7 +33,6 @@ function checkWinner() {
         [0, 3, 6], [1, 4, 7], [2, 5, 8],
         [0, 4, 8], [2, 4, 6]
     ];
-    console.log('masuk tahap cari pemenang');
     const sortedArray = currentPlayer.playerArray.map(Number).sort();
     for (let i = 0; i < winArrays.length; i++) {
         let possibleWin = 0;
@@ -48,17 +45,18 @@ function checkWinner() {
         console.log(`Kemungkinan menang ${possibleWin}`);
         console.log(`Sorted Array ${sortedArray}`);
         if (possibleWin === 3){
-            alert(currentPlayer.username + ' menang!');
+            alert(currentPlayer.userName + ' menang!');
             return;
         }  
     };
 }
 
-function AddSign(selectedCell, playerSign) {
+function AddCodeName(selectedCell, playerSign) {
     selectedCell.innerHTML = playerSign;
 }
 
 function togglePlayer() {
     currentPlayer = currentPlayer === playerX ? playerO : playerX;
+    playerTurn = document.querySelector('#player-turn').innerHTML = currentPlayer.userName;
     return currentPlayer;
 }
