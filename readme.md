@@ -1,22 +1,21 @@
-# Nama Proyek
+# Tic-Tac-Toe Game
 
 ## Deskripsi
-Proyek ini adalah... [deskripsi singkat 1-2 kalimat]
+Tic-tac-toe (juga dikenal sebagai noughts dan crosses atau Xs dan Os) adalah permainan kertas dan pensil untuk dua pemain, X dan O, yang bergiliran menandai ruang dalam grid 3 × 3. <br>
+Sumber: [Wikipedia](https://id.wikipedia.org/wiki/Silang-bulat-silang)
 
-## Screenshot
-![Screenshot aplikasi](/path/ke/screenshot.png)
+<!-- ## Screenshot
+![Screenshot aplikasi](/path/ke/screenshot.png) -->
 
 ## Cara Instalasi
 ```bash
-git clone https://github.com/username/nama-repo.git
-cd nama-repo
-# perintah lain jika ada
+git clone https://github.com/adeak-bar25/Tic-tac-toe-game
 ```
 
-## Fitur
-- Fitur 1
-- Fitur 2
-- Fitur 3
+## Hal-Hal Yang Akan Ditambahkan
+- Score
+- UI yang lebih bagus
+- Bot untuk bermain sendiri
 
 ## Teknologi yang Digunakan
 - HTML
@@ -29,6 +28,8 @@ cd nama-repo
 
 ## 📄 Lisensi
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+Background Pattern pada proyek ini disediakan oleh [Subtle Patterns by Toptal](https://www.toptal.com/designers/subtlepatterns/)
 
 ---
 

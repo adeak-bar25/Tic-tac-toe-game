@@ -1,0 +1,59 @@
+/*
+  Background pattern provided by Subtle Patterns by Toptal
+  URL: https://www.toptal.com/designers/subtlepatterns/
+  Licensed under Creative Commons
+*/
+
+body{
+    background-image: url(/asset/interlaced.png);
+}
+
+#main{
+    width: 80%;
+    margin: 10vh auto;
+    display: flex;
+    background-color: #Eff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#game-board {
+    width: 40%;
+    /* margin: auto; */
+    display:grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 1fr);
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: bold;;
+}
+
+#game-board > .cell {
+    aspect-ratio: 1 / 1;
+    gap: 0;
+    border: 1px solid #000;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-board > .cell:not(.filled):hover {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+#game-board > .cell:hover:active {
+    background-color: #aaa;
+}
+
+#game-board > .X{
+    color: rgb(255, 83, 83)
+}
+
+#game-board > .O{
+    color: rgb(37, 170, 253)
+}
+
+#game-info > :nth-child(2){
+    display: none;
+}
