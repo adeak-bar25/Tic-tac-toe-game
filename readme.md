@@ -1,7 +1,7 @@
 # Tic-Tac-Toe Game
 
 ## Deskripsi
-Tic-tac-toe (juga dikenal sebagai noughts dan crosses atau Xs dan Os) adalah permainan kertas dan pensil untuk dua pemain, X dan O, yang bergiliran menandai ruang dalam grid 3 × 3. <br>
+Tic-tac-toe (juga dikenal sebagai noughts dan crosses atau Xs dan Os) adalah permainan kertas dan pensil untuk dua pemain, X dan O, yang bergiliran menandai ruang dalam grid 3 × 3.  
 Sumber: [Wikipedia](https://id.wikipedia.org/wiki/Silang-bulat-silang)
 
 <!-- ## Screenshot
@@ -13,9 +13,9 @@ git clone https://github.com/adeak-bar25/Tic-tac-toe-game
 ```
 
 ## Hal-Hal Yang Akan Ditambahkan
-- Score
-- UI yang lebih bagus
-- Bot untuk bermain sendiri
+- [ ] Score
+- [ ] UI yang lebih bagus
+- [ ] Bot untuk bermain sendiri
 
 ## Teknologi yang Digunakan
 - HTML
